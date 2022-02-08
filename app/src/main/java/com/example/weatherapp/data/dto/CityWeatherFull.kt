@@ -1,6 +1,7 @@
 package com.example.weatherapp.data.dto
 
-data class Weath(
+// TODO переименовать
+data class CityWeatherFull(
     val clouds: Clouds,
     val coord: Coord,
     val dt: Int,

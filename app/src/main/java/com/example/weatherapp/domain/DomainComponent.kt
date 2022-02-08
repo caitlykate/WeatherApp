@@ -7,5 +7,6 @@ object DomainComponent {
     val getWeatherInteractor: GetWeatherInteractor
         get() = GetWeatherInteractorImpl(
             api = DataComponent.api,
+            mapper = WeatherDomainMapperImpl(),
         )
 }
