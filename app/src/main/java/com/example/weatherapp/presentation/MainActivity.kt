@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private fun initRecyclerView(){
         binding.rcView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = adapter
+            adapter = this@MainActivity.adapter
         }
     }
     private fun observeToLiveData() {
