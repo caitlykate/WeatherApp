@@ -1,12 +1,21 @@
 package com.example.weatherapp.domain
 
 import com.example.weatherapp.data.DataComponent
+import com.example.weatherapp.domain.mappers.CityWeatherEntityToCityWeatherMapper
+import com.example.weatherapp.domain.mappers.CityWeatherFullToCityWeatherEntityMapper
 
 object DomainComponent {
 
-    val getWeatherInteractor: GetWeatherInteractor
-        get() = GetWeatherInteractorImpl(
+    val getAllCitiesWeatherInteractor: GetAllCitiesWeatherInteractor
+        get() = GetAllCitiesWeatherInteractorImpl(
+            db = DataComponent.db,
+            cityWeatherEntityToCityWeatherMapper = CityWeatherEntityToCityWeatherMapper(),
+        )
+
+    val updateWeatherInteractor: UpdateWeatherInteractor
+        get() = UpdateWeatherInteractorImpl(
             api = DataComponent.api,
-            mapper = WeatherDomainMapperImpl(),
+            db = DataComponent.db,
+            weatherDomainMapper = CityWeatherFullToCityWeatherEntityMapper(),
         )
 }

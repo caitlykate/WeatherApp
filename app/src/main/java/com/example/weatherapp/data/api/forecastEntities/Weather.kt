@@ -1,4 +1,4 @@
-package com.example.weatherapp.data.dto
+package com.example.weatherapp.data.api.forecastEntities
 
 data class Weather(
     val description: String,

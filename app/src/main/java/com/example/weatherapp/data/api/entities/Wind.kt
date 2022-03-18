@@ -1,4 +1,4 @@
-package com.example.weatherapp.data.dto
+package com.example.weatherapp.data.api.entities
 
 data class Wind(
     val deg: Int,
