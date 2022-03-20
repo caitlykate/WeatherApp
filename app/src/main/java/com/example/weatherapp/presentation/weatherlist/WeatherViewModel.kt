@@ -82,7 +82,7 @@ class WeatherViewModelFactory : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
 
         val weatherViewModel = WeatherViewModel(
-            getWeatherInteractor = DomainComponent.getAllCitiesWeatherInteractor,
+            getAllCitiesWeatherInteractor = DomainComponent.getAllCitiesWeatherInteractor,
             updateWeatherInteractor = DomainComponent.updateWeatherInteractor,
         )
 
