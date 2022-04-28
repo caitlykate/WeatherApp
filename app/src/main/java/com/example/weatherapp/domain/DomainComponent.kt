@@ -22,10 +22,9 @@ object DomainComponent {
             weatherDomainMapper = CityWeatherFullToCityWeatherEntityMapper(),
         )
 
-    val getCityWeatherForecast: GetCityWeatherForecastInteractor
+    val getCityWeatherForecastInteractor: GetCityWeatherForecastInteractor
         get() = GetCityWeatherForecastInteractorImpl(
             api = DataComponent.api,
             forecastWeatherMapper = ForecastWeatherMapper(),
-            cityId = "12345"
         )
 }

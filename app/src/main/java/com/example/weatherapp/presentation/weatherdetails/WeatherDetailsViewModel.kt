@@ -1,4 +1,9 @@
 package com.example.weatherapp.presentation.weatherdetails
 
-class WeatherDetailsViewModel {
+import androidx.lifecycle.ViewModel
+import com.example.weatherapp.domain.interactors.GetCityWeatherForecastInteractor
+
+class WeatherDetailsViewModel(
+    private val getCityWeatherForecastInteractor: GetCityWeatherForecastInteractor
+) : ViewModel() {
 }

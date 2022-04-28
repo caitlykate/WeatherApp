@@ -5,8 +5,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.example.weatherapp.databinding.ActivityMainBinding
-import com.example.weatherapp.presentation.WeatherViewModel
-import com.example.weatherapp.presentation.WeatherViewModelFactory
+import com.example.weatherapp.presentation.weatherlist.WeatherViewModelFactory
 import com.example.weatherapp.presentation.weatherdetails.WeatherDetailsActivity
 
 class MainActivity : AppCompatActivity() {

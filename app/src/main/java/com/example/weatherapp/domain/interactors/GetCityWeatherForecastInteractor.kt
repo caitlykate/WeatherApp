@@ -20,19 +20,20 @@ private const val CITY_ID_LIST = "536203,524894,5128581,2643743,2968815"
 
 interface GetCityWeatherForecastInteractor {
 
-    fun getWeather(): Single<List<ForecastWeather>>
+    fun getWeather(cityId: Int): Single<List<ForecastWeather>>
 }
 
 class GetCityWeatherForecastInteractorImpl(
     private val api: Api,
     private val forecastWeatherMapper : (CityWeatherForecast) -> ForecastWeather,
-    private val cityId : String
 ) : GetCityWeatherForecastInteractor {
 
-    override fun getWeather(): Single<List<ForecastWeather>> {
+    data class Optional<T>(val value: T?)
+    override fun getWeather(cityId: Int): Single<List<ForecastWeather>> {
+
         return api
             .getForecastWeather(
-                id = cityId,
+                id = cityId.toString(),
                 units = METRIC,
                 appid = BuildConfig.API_KEY,
             )

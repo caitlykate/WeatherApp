@@ -1,4 +1,4 @@
-package com.example.weatherapp.presentation
+package com.example.weatherapp.presentation.weatherlist
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -13,7 +13,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 
 class WeatherViewModel(
     private val getAllCitiesWeatherInteractor: GetAllCitiesWeatherInteractor,
-    private val updateWeatherInteractor: UpdateWeatherInteractor,
+    private val updateWeatherInteractor: UpdateWeatherInteractor
 ) : ViewModel() {
 
     val weatherLiveData: LiveData<List<CityWeather>> get() = weatherMutableLiveData
