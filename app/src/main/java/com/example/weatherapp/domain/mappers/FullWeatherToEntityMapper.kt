@@ -1,12 +1,12 @@
 package com.example.weatherapp.domain.mappers
 
-import com.example.weatherapp.data.api.entities.CityWeatherFull
+import com.example.weatherapp.data.api.entities.CityWeatherData
 import com.example.weatherapp.domain.entities.CityWeather
 import kotlin.math.roundToInt
 
-class FullWeatherToEntityMapper : (CityWeatherFull) -> CityWeather {
+class FullWeatherToEntityMapper : (CityWeatherData) -> CityWeather {
 
-    override fun invoke(weath: CityWeatherFull): CityWeather {
+    override fun invoke(weath: CityWeatherData): CityWeather {
         return CityWeather(
             weath.id,
             weath.name,

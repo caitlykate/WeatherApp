@@ -6,5 +6,5 @@ data class CityWeatherResponse(
     val cnt: Int,
 
     @SerializedName("list")
-    val weatherList: List<CityWeatherFull>
+    val weatherList: List<CityWeatherData>
 )

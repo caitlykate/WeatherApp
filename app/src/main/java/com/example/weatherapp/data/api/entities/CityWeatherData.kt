@@ -1,7 +1,6 @@
 package com.example.weatherapp.data.api.entities
 
-// TODO переименовать
-data class CityWeatherFull(
+data class CityWeatherData(
 
     val dt: Int,
     val id: Int,

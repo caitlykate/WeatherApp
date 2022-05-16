@@ -2,7 +2,7 @@ package com.example.weatherapp.domain
 
 import com.example.weatherapp.BuildConfig
 import com.example.weatherapp.data.api.Api
-import com.example.weatherapp.data.api.entities.CityWeatherFull
+import com.example.weatherapp.data.api.entities.CityWeatherData
 import com.example.weatherapp.data.db.MainDataBase
 import com.example.weatherapp.data.db.entities.CityWeatherEntity
 import io.reactivex.rxjava3.core.Completable
@@ -18,7 +18,7 @@ interface UpdateWeatherInteractor {
 class UpdateWeatherInteractorImpl(
     private val api: Api,
     private val db: MainDataBase,
-    private val weatherDomainMapper: (CityWeatherFull) -> CityWeatherEntity
+    private val weatherDomainMapper: (CityWeatherData) -> CityWeatherEntity
 ) : UpdateWeatherInteractor {
 
     override fun updateWeather(): Completable {

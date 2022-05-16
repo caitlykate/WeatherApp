@@ -1,13 +1,13 @@
 package com.example.weatherapp.domain.mappers
 
-import com.example.weatherapp.data.api.entities.CityWeatherFull
+import com.example.weatherapp.data.api.entities.CityWeatherData
 import com.example.weatherapp.data.db.entities.CityWeatherEntity
 import java.util.*
 
-class CityWeatherFullToCityWeatherEntityMapper : (CityWeatherFull) -> CityWeatherEntity {
+class CityWeatherFullToCityWeatherEntityMapper : (CityWeatherData) -> CityWeatherEntity {
 
-    override fun invoke(cityWeatherFull: CityWeatherFull): CityWeatherEntity {
-        return with(cityWeatherFull) {
+    override fun invoke(cityWeatherData: CityWeatherData): CityWeatherEntity {
+        return with(cityWeatherData) {
             CityWeatherEntity(
                 id = id,
                 cityName = name,

@@ -8,10 +8,13 @@ class ForecastWeatherMapper : (CityWeatherForecast) -> ForecastWeather {
     override fun invoke(cityWeatherForecast: CityWeatherForecast): ForecastWeather {
         return with(cityWeatherForecast){
             ForecastWeather(
-                dt = dt,
+                date = dt,
                 temp = main.temp.roundToInt(),
                 feelsLike = main.feels_like.roundToInt(),
-                windSpeed = wind.speed.roundToInt()
+                tempMin = main.temp_min.roundToInt(),
+                tempMax = main.temp_max.roundToInt(),
+                windSpeed = wind.speed.roundToInt(),
+                icon = weather.first().icon
             )
         }
     }

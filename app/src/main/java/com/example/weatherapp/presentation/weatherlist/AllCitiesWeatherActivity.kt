@@ -4,11 +4,13 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.weatherapp.databinding.ActivityMainBinding
+import com.example.weatherapp.presentation.BaseActivity
 import com.example.weatherapp.presentation.weatherlist.WeatherViewModelFactory
 import com.example.weatherapp.presentation.weatherdetails.WeatherDetailsActivity
 
-class MainActivity : AppCompatActivity() {
+class AllCitiesWeatherActivity : BaseActivity() {
 
     private val binding: ActivityMainBinding by lazy(mode = LazyThreadSafetyMode.NONE) {
         ActivityMainBinding.inflate(layoutInflater)

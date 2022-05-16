@@ -16,7 +16,7 @@
             android:name=".presentation.weatherdetails.WeatherDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.weatherlist.MainActivity"
+            android:name=".presentation.weatherlist.AllCitiesWeatherActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
