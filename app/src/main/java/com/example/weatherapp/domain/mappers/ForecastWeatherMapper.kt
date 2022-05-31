@@ -14,6 +14,8 @@ class ForecastWeatherMapper : (CityWeatherForecast) -> ForecastWeather {
                 tempMin = main.temp_min.roundToInt(),
                 tempMax = main.temp_max.roundToInt(),
                 windSpeed = wind.speed.roundToInt(),
+                humidity = main.humidity,
+                pressure = main.pressure,
                 icon = weather.first().icon
             )
         }

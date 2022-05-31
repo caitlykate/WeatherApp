@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">WeatherApp</string>
     <string name="update_error">Упс.. Что-то пошло не так</string>
+    <string name="feels_like">Ощущается как: %d</string>
+    <string name="wind_speed">%d м/с</string>
+    <string name="humidity">%d%%</string>
+    <string name="pressure">%d мм рт.ст.</string>
 </resources>

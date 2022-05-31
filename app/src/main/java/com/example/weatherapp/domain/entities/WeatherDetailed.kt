@@ -1,11 +1,10 @@
 package com.example.weatherapp.domain.entities
 
-data class ForecastWeather(
+data class WeatherDetailed(
+    val cityName: String,
     val date: Long,
     val temp: Int,
     val feelsLike: Int,
-    val tempMin: Int,
-    val tempMax: Int,
     val windSpeed: Int,
     val humidity: Int,
     val pressure: Int,

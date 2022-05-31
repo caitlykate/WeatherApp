@@ -5,6 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/white"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
@@ -34,7 +35,7 @@
                 android:textColor="@color/almost_black" />
         </LinearLayout>
 
-        <FrameLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -50,7 +51,7 @@
 
         <TextView
             android:id="@+id/maxTempTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
@@ -60,10 +61,16 @@
 
         <TextView
             android:id="@+id/minTempTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="-7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:background="@color/light_blue"
+            />
     </LinearLayout>

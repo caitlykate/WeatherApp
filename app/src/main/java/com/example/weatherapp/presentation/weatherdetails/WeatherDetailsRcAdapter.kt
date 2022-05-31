@@ -1,11 +1,15 @@
 package com.example.weatherapp.presentation.weatherdetails
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.weatherapp.databinding.ItemForecastBinding
 import com.example.weatherapp.domain.entities.ForecastWeather
+import java.lang.StringBuilder
+import java.sql.Timestamp
 import java.text.DateFormat
 import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
@@ -14,7 +18,7 @@ import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 import java.util.*
 
-class WeatherDetailsRcAdapter : RecyclerView.Adapter<WeatherDetailsRcAdapter.WeatherForecastHolder>() {
+class WeatherDetailsRcAdapter(val context: Context) : RecyclerView.Adapter<WeatherDetailsRcAdapter.WeatherForecastHolder>() {
 
     var forecastWeatherList: List<ForecastWeather> = emptyList()
         @SuppressLint("NotifyDataSetChanged")
@@ -63,11 +67,17 @@ class WeatherDetailsRcAdapter : RecyclerView.Adapter<WeatherDetailsRcAdapter.Wea
 //            val jud = SimpleDateFormat("yyyy-MM-dd").parse("2014-02-28")
 //            val month = sdf.format(jud)
 //            println(month) // output: 28 февраля 2014 г.
-
-            val date = Date(forecastWeather.date)
-            dateTextView.text = SimpleDateFormat("DD MMMM", Locale("ru")).format(date)
+            val date = Date(Timestamp(forecastWeather.date).getTime()*1000)
+            val icon_res = StringBuilder("https://openweathermap.org/img/wn/")
+                .append(forecastWeather.icon)
+                .append("@4x.png")
+            dateTextView.text = SimpleDateFormat("dd MMMM", Locale("ru")).format(date)
             timeTextView.text = SimpleDateFormat("HH:MM", Locale("ru")).format(date)
             //weatherPicImageView = forecastWeather.icon
+
+            Glide.with(weatherPicImageView)
+                .load(icon_res.toString())
+                .into(weatherPicImageView)
             maxTempTextView.text = forecastWeather.tempMax.toString()
             minTempTextView.text = forecastWeather.tempMin.toString()
         }

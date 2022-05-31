@@ -2,12 +2,9 @@ package com.example.weatherapp.presentation.weatherlist
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.weatherapp.databinding.ActivityMainBinding
 import com.example.weatherapp.presentation.BaseActivity
-import com.example.weatherapp.presentation.weatherlist.WeatherViewModelFactory
 import com.example.weatherapp.presentation.weatherdetails.WeatherDetailsActivity
 
 class AllCitiesWeatherActivity : BaseActivity() {
@@ -21,7 +18,8 @@ class AllCitiesWeatherActivity : BaseActivity() {
             startActivity(
                 WeatherDetailsActivity.getIntent(
                     context = this,
-                    cityWeatherId = cityWeather.id,
+                    cityId = cityWeather.id,
+                    cityName = cityWeather.cityName
                 )
             )
         }

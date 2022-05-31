@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
@@ -36,8 +36,14 @@
                 tools:text="Санкт-Петербург" />
 
             <TextView
-                android:id="@+id/tempTextView"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3" />
+
+            <TextView
+                android:id="@+id/tempTextView"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
@@ -47,7 +53,7 @@
 
             <TextView
                 android:id="@+id/feelsLikeTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
