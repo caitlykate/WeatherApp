@@ -3,6 +3,7 @@ package com.example.weatherapp.presentation.weatherlist
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
+import com.example.weatherapp.R
 import com.example.weatherapp.databinding.ActivityMainBinding
 import com.example.weatherapp.presentation.BaseActivity
 import com.example.weatherapp.presentation.weatherdetails.WeatherDetailsActivity
@@ -22,6 +23,7 @@ class AllCitiesWeatherActivity : BaseActivity() {
                     cityName = cityWeather.cityName
                 )
             )
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
     )
 

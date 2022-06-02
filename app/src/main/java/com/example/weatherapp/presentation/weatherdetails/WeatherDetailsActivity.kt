@@ -11,10 +11,10 @@ import com.example.weatherapp.databinding.ActivityWeatherDetailsBinding
 import com.example.weatherapp.domain.entities.ForecastWeather
 import com.example.weatherapp.other.DividerDecoration
 import com.example.weatherapp.presentation.BaseActivity
-import java.lang.StringBuilder
 import java.sql.Timestamp
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class WeatherDetailsActivity : BaseActivity() {
 
@@ -81,6 +81,11 @@ class WeatherDetailsActivity : BaseActivity() {
         windSpeed.text = getString(R.string.wind_speed, weather.windSpeed)
         humidity.text = getString(R.string.humidity, weather.humidity)
         pressure.text = getString(R.string.pressure, weather.pressure)
+    }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 
     companion object {
