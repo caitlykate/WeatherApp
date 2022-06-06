@@ -1,4 +1,4 @@
-package com.example.weatherapp.domain
+package com.example.weatherapp.domain.interactors
 
 import com.example.weatherapp.BuildConfig
 import com.example.weatherapp.data.api.Api

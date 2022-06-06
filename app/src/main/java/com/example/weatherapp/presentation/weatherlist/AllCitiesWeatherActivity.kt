@@ -23,7 +23,7 @@ class AllCitiesWeatherActivity : BaseActivity() {
                     cityName = cityWeather.cityName
                 )
             )
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
     )
 
@@ -53,6 +53,7 @@ class AllCitiesWeatherActivity : BaseActivity() {
         }
         weatherViewModel.hasErrorLiveData.observe(this) { hasError ->
             binding.errorTextView.isVisible = hasError
+            binding.weatherRecyclerView.isVisible = !hasError
         }
         weatherViewModel.isLoadingLiveData.observe(this) { isLoading ->
             binding.progressBar.isVisible = isLoading
